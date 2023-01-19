@@ -171,6 +171,7 @@ For feedback, please see [Contact us](#contact-us)
     * Now to access from the internet here we must provide our DNS(don't forget to cd to your repository cd cvat on our case), in this example we use AWS.(but you could use any DNS you like using the Public IP of the VM, don't forget to use your VM DNS this link is an example)
         ```bash
         export CVAT_HOST=ec2-52-91-8-205.compute-1.amazonaws.com
+        export ACME_EMAIL=<YOUR_EMAIL>
         ```
     * Finally we start our server
         ```bash
