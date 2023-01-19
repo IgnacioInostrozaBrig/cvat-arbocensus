@@ -158,7 +158,7 @@ For feedback, please see [Contact us](#contact-us)
         sudo apt-get --no-install-recommends install -y \
           docker-ce docker-ce-cli containerd.io docker-compose-plugin
         ```
-    * Run Docker without root permisions(after running the command execute exit, and access the ssh again and run groups, docker must appear on the list)
+    * Run Docker without root permisions(after running the command 👇 bellow execute exit, and access the ssh again and run groups, docker must appear on the list)
         ```bash
         sudo groupadd docker
         sudo usermod -aG docker $USER
