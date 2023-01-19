@@ -129,9 +129,22 @@ For feedback, please see [Contact us](#contact-us)
 1. [Create instance on AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstances:)
     * Select OS (Ubuntu 18.04)<br /><img src="https://user-images.githubusercontent.com/88388684/213492396-3eb882c7-ff10-4153-ac74-f0581372ea04.png" alt="drawing" width="500"/>
     * Must be at least 2 vCPUs, 4GiB. Key pair to secure access to VM(.pem)<br /><img src="https://user-images.githubusercontent.com/88388684/213494358-08ccf413-245b-4fd2-96a8-5e23ced6d398.png" alt="drawing" width="500"/>
-    * Allow access to HTTP and HTTPS, SSH to anyone (0.0.0.0/0) or in the meantime just your IP(you can config access later on security groups)<br /><img src="https://user-images.githubusercontent.com/88388684/213499553-31a6dec7-385c-4506-be3d-3cd6219c8293.png" alt="drawing" width="500"/>
+    * Allow access to HTTP and HTTPS, SSH to anyone (0.0.0.0/0) or in the meantime just your IP(you can config access later on security groups)<br /><img src="https://user-images.githubusercontent.com/88388684/213508146-3c02c529-be06-4933-81c3-0aef1f0041f5.png" alt="drawing" width="500"/>
+
     * Storage by default<br /><img src="https://user-images.githubusercontent.com/88388684/213501910-658ce282-4f69-4b1b-acfc-ab1f8c298ea9.png" alt="drawing" width="500"/>
     * Launch instance<br /><img src="https://user-images.githubusercontent.com/88388684/213503013-547d9edc-a803-4b90-8f95-9f521c7f7af5.png" alt="drawing" height="400"/>
+2. [Access to VM info](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:)
+    * Wait for instance to be verified and ready to use, then click on ID link<br /><img src="https://user-images.githubusercontent.com/88388684/213505198-8e54531e-638c-495b-a08e-1f82bb18f401.png" alt="drawing"/>
+    * Click on Conect(up-right corner)<br /><img src="https://user-images.githubusercontent.com/88388684/213505816-008c5d96-dae1-4898-8bfb-1fc774f5795a.png" alt="drawing"/>
+    * Go to SSH and copy the example command(ssh -i...)<br /><img src="https://user-images.githubusercontent.com/88388684/213510028-87ebca30-4c94-4170-a638-381b829eb00a.png" alt="drawing" width="500"/>
+    * Open your terminal where the .pem file is located and execute<br /><img src="https://user-images.githubusercontent.com/88388684/213511510-98f06ed3-d9f3-44cd-a02e-10e09a6b851e.png" alt="drawing"/>
+    * Now you have access to the VM terminal and we can proceed to the installation.<br /><img src="https://user-images.githubusercontent.com/88388684/213511882-752982ec-14f9-4073-a215-78021a13efb5.png" alt="drawing"/>
+  
+
+
+
+
+
 
 
 
