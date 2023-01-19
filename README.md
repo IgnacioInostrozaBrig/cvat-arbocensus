@@ -39,7 +39,7 @@ Or set it up as a self-hosted solution:
 - [Python SDK](#sdk)
 - [Command line tool](#cli)
 - [XML annotation format](https://opencv.github.io/cvat/docs/manual/advanced/xml_format/)
-- [AWS Deployment Guide](https://opencv.github.io/cvat/docs/administration/basics/aws-deployment-guide/)
+- [Deployment Guide AWS](#deploy)
 - [Frequently asked questions](https://opencv.github.io/cvat/docs/faq/)
 - [Where to ask questions](#where-to-ask-questions)
 
@@ -123,6 +123,20 @@ For feedback, please see [Contact us](#contact-us)
 - Install with `pip install cvat-cli`
 - [PyPI package homepage](https://pypi.org/project/cvat-cli/)
 - [Documentation](https://opencv.github.io/cvat/docs/api_sdk/cli/)
+
+## Deploy
+
+1. [Create instance on AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstances:)
+    * Select OS (Ubuntu 18.04)<br /><img src="https://user-images.githubusercontent.com/88388684/213492396-3eb882c7-ff10-4153-ac74-f0581372ea04.png" alt="drawing" width="500"/>
+    * Must be at least 2 vCPUs, 4GiB. Key pair to secure access to VM(.pem)<br /><img src="https://user-images.githubusercontent.com/88388684/213494358-08ccf413-245b-4fd2-96a8-5e23ced6d398.png" alt="drawing" width="500"/>
+    * Allow access to HTTP and HTTPS, SSH to anyone (0.0.0.0/0) or in the meantime just your IP(you can config access later on security groups)<br /><img src="https://user-images.githubusercontent.com/88388684/213499553-31a6dec7-385c-4506-be3d-3cd6219c8293.png" alt="drawing" width="500"/>
+    * Storage by default<br /><img src="https://user-images.githubusercontent.com/88388684/213501910-658ce282-4f69-4b1b-acfc-ab1f8c298ea9.png" alt="drawing" width="500"/>
+    * Launch instance<br /><img src="https://user-images.githubusercontent.com/88388684/213503013-547d9edc-a803-4b90-8f95-9f521c7f7af5.png" alt="drawing" height="400"/>
+
+
+
+
+
 
 ## Supported annotation formats
 
