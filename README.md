@@ -137,17 +137,51 @@ For feedback, please see [Contact us](#contact-us)
     * Wait for instance to be verified and ready to use, then click on ID link<br /><img src="https://user-images.githubusercontent.com/88388684/213505198-8e54531e-638c-495b-a08e-1f82bb18f401.png" alt="drawing"/>
     * Click on Conect(up-right corner)<br /><img src="https://user-images.githubusercontent.com/88388684/213505816-008c5d96-dae1-4898-8bfb-1fc774f5795a.png" alt="drawing"/>
     * Go to SSH and copy the example command(ssh -i...)<br /><img src="https://user-images.githubusercontent.com/88388684/213510028-87ebca30-4c94-4170-a638-381b829eb00a.png" alt="drawing" width="500"/>
-    * Open your terminal where the .pem file is located and execute<br /><img src="https://user-images.githubusercontent.com/88388684/213511510-98f06ed3-d9f3-44cd-a02e-10e09a6b851e.png" alt="drawing"/>
+    * Open your terminal where the .pem file is located and execute your example command<br /><img src="https://user-images.githubusercontent.com/88388684/213511510-98f06ed3-d9f3-44cd-a02e-10e09a6b851e.png" alt="drawing"/>
     * Now you have access to the VM terminal and we can proceed to the installation.<br /><img src="https://user-images.githubusercontent.com/88388684/213511882-752982ec-14f9-4073-a215-78021a13efb5.png" alt="drawing"/>
+3. [CVAT repository installation on Ubuntu 18.04](https://opencv.github.io/cvat/docs/administration/basics/installation/)
+    * All the commands must be executed within VM we previously access 👆.
+        ```bash
+        sudo apt-get update
+        sudo apt-get --no-install-recommends install -y \
+          apt-transport-https \
+          ca-certificates \
+          curl \
+          gnupg-agent \
+          software-properties-common
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+        sudo add-apt-repository \
+          "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+          $(lsb_release -cs) \
+          stable"
+        sudo apt-get update
+        sudo apt-get --no-install-recommends install -y \
+          docker-ce docker-ce-cli containerd.io docker-compose-plugin
+        ```
+    * Run Docker without root permisions(after running the command execute exit, and access the ssh again and run groups, docker must appear on the list)
+        ```bash
+        sudo groupadd docker
+        sudo usermod -aG docker $USER
+        ```
+    * Clone the CVAT repository or your custom fork.
+        ```bash
+        git clone https://github.com/opencv/cvat
+        cd cvat
+        ```
+    * Now to access from the internet here we must provide our DNS(don't forget to cd to your repository cd cvat on our case), in this example we use AWS.(but you could use any DNS you like using the Public IP of the VM, don't forget to use your VM DNS this link is an example)
+        ```bash
+        export CVAT_HOST=ec2-52-91-8-205.compute-1.amazonaws.com
+        ```
+    * Finally we start our server
+        ```bash
+        docker compose -f docker-compose.yml -f docker-compose.https.yml up -d
+        ```
+    * You can access the traefik log(in case of errors) running
+        ```bash
+        docker logs traefik
+        ```
+    * You can access the CVAT page via your VM link in this example it would be ec2-52-91-8-205.compute-1.amazonaws.com
   
-
-
-
-
-
-
-
-
 
 
 
