@@ -134,7 +134,7 @@ For feedback, please see [Contact us](#contact-us)
     * Storage by default<br /><img src="https://user-images.githubusercontent.com/88388684/213501910-658ce282-4f69-4b1b-acfc-ab1f8c298ea9.png" alt="drawing" width="500"/>
     * Launch instance<br /><img src="https://user-images.githubusercontent.com/88388684/213503013-547d9edc-a803-4b90-8f95-9f521c7f7af5.png" alt="drawing" height="400"/>
 2. [Access to VM info](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:)
-    * Wait for instance to be verified and ready to use, then click on ID link<br /><img src="https://user-images.githubusercontent.com/88388684/213505198-8e54531e-638c-495b-a08e-1f82bb18f401.png" alt="drawing"/>
+    * Wait for instance to be verified and ready to use(update or f5 to watch changes), then click on ID link<br /><img src="https://user-images.githubusercontent.com/88388684/213526552-2726b332-eade-48ce-8ca0-90675abc3f8a.png" alt="drawing"/>
     * Click on Conect(up-right corner)<br /><img src="https://user-images.githubusercontent.com/88388684/213505816-008c5d96-dae1-4898-8bfb-1fc774f5795a.png" alt="drawing"/>
     * Go to SSH and copy the example command(ssh -i...)<br /><img src="https://user-images.githubusercontent.com/88388684/213510028-87ebca30-4c94-4170-a638-381b829eb00a.png" alt="drawing" width="500"/>
     * Open your terminal where the .pem file is located and execute your example command<br /><img src="https://user-images.githubusercontent.com/88388684/213511510-98f06ed3-d9f3-44cd-a02e-10e09a6b851e.png" alt="drawing"/>
