@@ -40,6 +40,7 @@ Or set it up as a self-hosted solution:
 - [Command line tool](#cli)
 - [XML annotation format](https://opencv.github.io/cvat/docs/manual/advanced/xml_format/)
 - [Deployment Guide AWS](#deploy)
+- [Access VM - Visual Studio](#vm-vs)
 - [Frequently asked questions](https://opencv.github.io/cvat/docs/faq/)
 - [Where to ask questions](#where-to-ask-questions)
 
@@ -183,6 +184,29 @@ For feedback, please see [Contact us](#contact-us)
         ```
     * You can access the CVAT page via your VM link in this example it would be ec2-52-91-8-205.compute-1.amazonaws.com
   
+## VM-VS
+1. [We can access our AWS using Visual Studio code](https://www.youtube.com/watch?v=elkL1OF9fxI).
+    * First install Remote - SSH extension<br /><img src="https://user-images.githubusercontent.com/88388684/213625984-c20af560-c8c5-43b9-9417-6ddd5c73cc85.png" alt="drawing"/>
+    * Click on:<br /><img src="https://user-images.githubusercontent.com/88388684/213626327-6019957f-7b4a-4e4b-8446-83011056cfc7.png" alt="drawing"/>
+    * Then click on:<br /><img src="https://user-images.githubusercontent.com/88388684/213626531-bda68c33-a150-4ee5-818e-5028342d813b.png" alt="drawing"/>
+    * Choose the first option<br /><img src="https://user-images.githubusercontent.com/88388684/213626765-19488d23-b70c-466d-a2c2-7aba3d93cfa2.png" alt="drawing"/>
+    * Now with the file open paste and replace the corresponding info:
+        ```
+        Host alias-for-vm
+            HostName ec2-your-dns-from-aws.compute-1.amazonaws.com
+            User ubuntu
+            IdentityFile ~/Downloads/yourFile.pem
+        ```
+    * Save and now we can access the vm clicking the bottom-left button (conect to remote ><), then choose your vm name.
+    ![image](https://user-images.githubusercontent.com/88388684/213627641-556e5b1a-96b2-4507-87f7-b31198f2a838.png)
+    * To access files click on VS explorer and open folder and select your CVAT repository and click OK.
+
+
+
+
+    
+
+    
 
 
 
