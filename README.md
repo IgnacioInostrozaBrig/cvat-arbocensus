@@ -211,7 +211,7 @@ For feedback, please see [Contact us](#contact-us)
 Update and upgrade ⚙️
 * sudo apt update && sudo apt upgrade
 
-- Python 3.9 🐍
+Python 3.9 🐍
 * sudo apt install software-properties-common
 * sudo add-apt-repository ppa:deadsnakes/ppa
 * sudo apt update
