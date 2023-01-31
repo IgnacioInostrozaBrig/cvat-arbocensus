@@ -232,9 +232,11 @@ CVAT installation 👁️
 * pip install -U pip wheel setuptools
 * pip install av
 
-# EDIT THE FOLLOWING FILES: By changing the equal value of av from = to >= equal or lower (Resulting: av>=9.2.0 )
+# EDIT THE FOLLOWING FILES: 
+By changing the av from = to >= equal or lower (Resulting: av>=9.2.0 )
 - cvat/requirements/base.txt
 - utils/data_manifest/requirements.txt 
+Now we can continue:
 
 * pip install -r cvat/requirements/development.txt -r utils/dataset_manifest/requirements.txt
 * python manage.py migrate
