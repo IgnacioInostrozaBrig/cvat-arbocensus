@@ -1,5 +1,6 @@
 ![CVAT logo](site/content/en/images/cvat_poster_with_name.png)
 
+# CVAT ARBOCENSUS
 # Computer Vision Annotation Tool (CVAT)
 
 <a href="https://www.producthunt.com/posts/cvat-computer-vision-annotation-tool?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cvat&#0045;computer&#0045;vision&#0045;annotation&#0045;tool" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=353415&theme=light" alt="CVAT&#0032;–&#0032;Computer&#0032;Vision&#0032;Annotation&#0032;Tool - The&#0032;open&#0032;data&#0032;annotation&#0032;platform&#0032;for&#0032;AI | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
@@ -125,7 +126,7 @@ For feedback, please see [Contact us](#contact-us)
 - [PyPI package homepage](https://pypi.org/project/cvat-cli/)
 - [Documentation](https://opencv.github.io/cvat/docs/api_sdk/cli/)
 
-## Deploy
+## Custom Deploy (UANDES)
 
 1. [Create instance on AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstances:)
     * Select OS (Ubuntu 18.04)<br /><img src="https://user-images.githubusercontent.com/88388684/213492396-3eb882c7-ff10-4153-ac74-f0581372ea04.png" alt="drawing" width="500"/>
@@ -184,7 +185,7 @@ For feedback, please see [Contact us](#contact-us)
         ```
     * You can access the CVAT page via your VM link in this example it would be ec2-52-91-8-205.compute-1.amazonaws.com
   
-## VM-VS
+## VM-VS - Installation (UANDES)
 1. [We can access our AWS using Visual Studio code](https://www.youtube.com/watch?v=elkL1OF9fxI).
     * First install Remote - SSH extension<br /><img src="https://user-images.githubusercontent.com/88388684/213625984-c20af560-c8c5-43b9-9417-6ddd5c73cc85.png" alt="drawing"/>
     * Click on:<br /><img src="https://user-images.githubusercontent.com/88388684/213626327-6019957f-7b4a-4e4b-8446-83011056cfc7.png" alt="drawing"/>
@@ -201,8 +202,9 @@ For feedback, please see [Contact us](#contact-us)
     ![image](https://user-images.githubusercontent.com/88388684/213627641-556e5b1a-96b2-4507-87f7-b31198f2a838.png)
     * To access files click on VS explorer and open folder and select your CVAT repository and click OK.
 
-
-
+## How to run in Ubuntu 18.04 (UANDES)
+Update and upgrade 
+* sudo apt update && sudo apt upgrade
 
     
 
