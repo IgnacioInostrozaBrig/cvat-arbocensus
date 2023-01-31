@@ -208,10 +208,10 @@ For feedback, please see [Contact us](#contact-us)
     * To access files click on VS explorer and open folder and select your CVAT repository and click OK.
 
 ## Run
-Update and upgrade ⚙️
+**Update and upgrade** ⚙️
 * sudo apt update && sudo apt upgrade
 
-Python 3.9 🐍
+**Python 3.9** 🐍
 * sudo apt install software-properties-common
 * sudo add-apt-repository ppa:deadsnakes/ppa
 * sudo apt update
@@ -219,14 +219,14 @@ Python 3.9 🐍
 * sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1
 * sudo apt install python3.9-dev python3.9-venv python3.9-distutils python3.9-gdbm python3.9-tk python3.9-lib2to3
 
-Dependencies 📚
+**Dependencies** 📚
 * sudo apt-get update && sudo apt-get --no-install-recommends install -y build-essential curl git redis-server python3-dev python3-pip python3-venv python3-tk libldap2-dev libsasl2-dev pkg-config libavformat-dev libavcodec-dev libavdevice-dev libavutil-dev libswscale-dev libswresample-dev libavfilter-dev
 * curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 * sudo apt-get install -y nodejs
 * sudo npm install --global yarn
 * sudo apt-get install libgeos-dev
 
-CVAT installation 👁️
+**CVAT installation** 👁️
 * Clone the github repository
 * cd cvat-arbocensus && mkdir logs keys
 * python -m venv .env
@@ -238,12 +238,22 @@ CVAT installation 👁️
 By changing the av from = to >= equal or lower (Resulting: av>=9.2.0 )
 - cvat/requirements/base.txt
 - utils/data_manifest/requirements.txt 
-## Now we can continue:
+
+**Now we can continue:**
 * pip install -r cvat/requirements/development.txt -r utils/dataset_manifest/requirements.txt
 * python manage.py migrate
 * python manage.py collectstatic
 * python manage.py createsuperuser
 * yarn --frozen-lockfile
+
+**Docker instalation 🐳**
+* Install docker with the following link: https://docs.docker.com/get-docker/
+* Pull and run OpenPolicyAgent Docker image:
+    ```
+     docker run -d --rm --name cvat_opa_debug -p 8181:8181 openpolicyagent/opa:0.45.0-rootless \
+     run --server --set=decision_logs.console=true --set=services.cvat.url=http://host.docker.internal:7000 \
+     --set=bundles.cvat.service=cvat --set=bundles.cvat.resource=/api/auth/rules
+    ```
 
 ## Social-Account-Google
 
