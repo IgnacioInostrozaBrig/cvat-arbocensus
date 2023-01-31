@@ -247,12 +247,27 @@ By changing the av from = to >= equal or lower (Resulting: av>=9.2.0 )
 * yarn --frozen-lockfile
 
 **Docker instalation 🐳**
-* Install docker with the following link: https://docs.docker.com/get-docker/
+* Install Docker (https://docs.docker.com/desktop/install/linux-install/)
 * Pull and run OpenPolicyAgent Docker image:
     ```
      docker run -d --rm --name cvat_opa_debug -p 8181:8181 openpolicyagent/opa:0.45.0-rootless \
      run --server --set=decision_logs.console=true --set=services.cvat.url=http://host.docker.internal:7000 \
      --set=bundles.cvat.service=cvat --set=bundles.cvat.resource=/api/auth/rules
+    ```
+
+**Run CVAT 🏍️**
+* Start npm UI debug server:
+    - In your localhost:
+    ```
+     yarn run start:cvat-ui
+    ```
+    - If you want to access CVAT from outside of your host:
+    ```
+     CVAT_UI_HOST='<YOUR_HOST_IP>' yarn run start:cvat-ui
+    ```
+* Open another terminal window and run VSCode on virtual enviroment:
+    ```
+     source .env/bin/activate && code
     ```
 
 ## Social-Account-Google
