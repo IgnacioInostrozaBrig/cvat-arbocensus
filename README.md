@@ -44,8 +44,9 @@ Or set it up as a self-hosted solution:
 - [Where to ask questions](#where-to-ask-questions)
 
 ## Uandes/Arbocensus 🌳
-- [Deployment Guide AWS UANDES](#Custom-Deployment)
+- [Deployment Guide AWS](#Custom-Deployment)
 - [Access VM - Visual Studio](#VM-VS)
+- [How to run on Ubuntu 18.04](#Run)
 
 ## Partners ❤️
 
@@ -204,11 +205,43 @@ For feedback, please see [Contact us](#contact-us)
     ![image](https://user-images.githubusercontent.com/88388684/213627641-556e5b1a-96b2-4507-87f7-b31198f2a838.png)
     * To access files click on VS explorer and open folder and select your CVAT repository and click OK.
 
-## How to run in Ubuntu 18.04 (UANDES)
-Update and upgrade 
+## Run
+Update and upgrade ⚙️
 * sudo apt update && sudo apt upgrade
 
-    
+- Python 3.9 🐍
+* sudo apt install software-properties-common
+* sudo add-apt-repository ppa:deadsnakes/ppa
+* sudo apt update
+* sudo apt install python3.9
+* sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1
+* sudo apt install python3.9-dev python3.9-venv python3.9-distutils python3.9-gdbm python3.9-tk python3.9-lib2to3
+
+Dependencies 📚
+* sudo apt-get update && sudo apt-get --no-install-recommends install -y build-essential curl git redis-server python3-dev python3-pip python3-venv python3-tk libldap2-dev libsasl2-dev pkg-config libavformat-dev libavcodec-dev libavdevice-dev libavutil-dev libswscale-dev libswresample-dev libavfilter-dev
+* curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+* sudo apt-get install -y nodejs
+* sudo npm install --global yarn
+* sudo apt-get install libgeos-dev
+
+CVAT installation 👁️
+* clone repository
+* cd cvat-arbocensus && mkdir logs keys
+* python -m venv .env
+* . .env/bin/activate
+* pip install -U pip wheel setuptools
+* pip install av
+
+EDIT THE FOLLOWING FILES: 
+cvat/requirements/base.txt 
+utils/data_manifest/requirements.txt 
+Change the value of av from = to >=
+-> av>=9.2.0
+* pip install -r cvat/requirements/development.txt -r utils/dataset_manifest/requirements.txt
+* python manage.py migrate
+* python manage.py collectstatic
+* python manage.py createsuperuser
+* yarn --frozen-lockfile
 
     
 
