@@ -47,6 +47,8 @@ Or set it up as a self-hosted solution:
 - [Deployment Guide AWS](#Custom-Deployment)
 - [Access VM - Visual Studio](#VM-VS)
 - [How to run on Ubuntu 18.04](#Run)
+- [Google Social Account](#Social-Account-Google)
+- [Build Docker Custom Image](#Custom-Docker-Image-Build)
 
 ## Partners ❤️
 
@@ -225,7 +227,7 @@ Dependencies 📚
 * sudo apt-get install libgeos-dev
 
 CVAT installation 👁️
-* clone repository
+* Clone the github repository
 * cd cvat-arbocensus && mkdir logs keys
 * python -m venv .env
 * . .env/bin/activate
@@ -243,9 +245,9 @@ By changing the av from = to >= equal or lower (Resulting: av>=9.2.0 )
 * python manage.py createsuperuser
 * yarn --frozen-lockfile
 
-    
+## Social-Account-Google
 
-
+## Custom-Docker-Image-Build
 
 ## Supported annotation formats
 
