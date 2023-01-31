@@ -44,8 +44,8 @@ Or set it up as a self-hosted solution:
 - [Where to ask questions](#where-to-ask-questions)
 
 ## Uandes/Arbocensus 🌳
-- [Deployment Guide AWS UANDES](#Custom-Deploy(UANDES))
-- [Access VM - Visual Studio](#VM-VS-Installation(UANDES))
+- [Deployment Guide AWS UANDES](#Custom-Deployment)
+- [Access VM - Visual Studio](#VM-VS)
 
 ## Partners ❤️
 
@@ -128,7 +128,7 @@ For feedback, please see [Contact us](#contact-us)
 - [PyPI package homepage](https://pypi.org/project/cvat-cli/)
 - [Documentation](https://opencv.github.io/cvat/docs/api_sdk/cli/)
 
-## Custom-Deploy(UANDES)
+## Custom-Deployment
 
 1. [Create instance on AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstances:)
     * Select OS (Ubuntu 18.04)<br /><img src="https://user-images.githubusercontent.com/88388684/213492396-3eb882c7-ff10-4153-ac74-f0581372ea04.png" alt="drawing" width="500"/>
@@ -187,7 +187,7 @@ For feedback, please see [Contact us](#contact-us)
         ```
     * You can access the CVAT page via your VM link in this example it would be ec2-52-91-8-205.compute-1.amazonaws.com
   
-## VM-VS-Installation(UANDES)
+## VM-VS
 1. [We can access our AWS using Visual Studio code](https://www.youtube.com/watch?v=elkL1OF9fxI).
     * First install Remote - SSH extension<br /><img src="https://user-images.githubusercontent.com/88388684/213625984-c20af560-c8c5-43b9-9417-6ddd5c73cc85.png" alt="drawing"/>
     * Click on:<br /><img src="https://user-images.githubusercontent.com/88388684/213626327-6019957f-7b4a-4e4b-8446-83011056cfc7.png" alt="drawing"/>
