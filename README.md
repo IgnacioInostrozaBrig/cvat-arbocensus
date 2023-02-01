@@ -249,6 +249,7 @@ By changing the av from = to >= equal or lower (Resulting: av>=9.2.0 )
 **Docker instalation 🐳**
 * Install Docker (https://docs.docker.com/desktop/install/linux-install/)
 * Pull and run OpenPolicyAgent Docker image:
+
     ```
      docker run -d --rm --name cvat_opa_debug -p 8181:8181 openpolicyagent/opa:0.45.0-rootless \
      run --server --set=decision_logs.console=true --set=services.cvat.url=http://host.docker.internal:7000 \
@@ -257,18 +258,29 @@ By changing the av from = to >= equal or lower (Resulting: av>=9.2.0 )
 
 **Run CVAT 🏍️**
 * Start npm UI debug server:
-    - In your localhost:
-    ```
-     yarn run start:cvat-ui
-    ```
+
+    - If you want to run CVAT in localhost:
+        ```
+         yarn run start:cvat-ui
+        ```
     - If you want to access CVAT from outside of your host:
-    ```
-     CVAT_UI_HOST='<YOUR_HOST_IP>' yarn run start:cvat-ui
-    ```
+        ```
+         CVAT_UI_HOST='<YOUR_HOST_IP>' yarn run start:cvat-ui
+        ```
 * Open another terminal window and run VSCode on virtual enviroment:
+
     ```
      source .env/bin/activate && code
     ```
+* Inside VScode, Open CVAT root dir.
+
+* Select `server: debug` configuration and run it (F5) to run REST server and its workers.
+
+* Make sure that `Uncaught Exceptions` option under breakpoints section is unchecked.
+
+* If you choose to run CVAT in localhost: Select `server: chrome` configuration and run it (F5) to open CVAT in Chrome.
+
+  **---Done---**  🏁 
 
 ## Social-Account-Google
 
